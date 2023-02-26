@@ -1,0 +1,302 @@
+* {
+    box-sizing: border-box;
+}
+
+/* 요구사항 기본세팅 */
+body {
+    margin: 0;
+    background-color: #fff;
+    color: #222328;
+    font-size: 16px;
+    font-family: sans-serif;
+
+}
+
+a {
+    text-decoration: none;
+    color: #222328;
+
+}
+
+a:hover {
+    color: #424249;
+
+}
+
+/* 프레임 설정 */
+.container {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+header {
+    height: 100px;
+    background-color: lightgreen;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* nav */
+ul.gnb {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+}
+
+ul.gnb>li {
+    width: 150px;
+    text-align: center;
+    position: relative;
+}
+
+ul.gnb>li>a {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 40px;
+    transition: all 200ms;
+}
+
+
+
+/* sub nav */
+
+ul.gnb>li:hover,
+ul.lnb li:hover {
+    background-color: aqua;
+}
+
+ul.lnb {
+    position: absolute;
+    background-color: aquamarine;
+    width: 100%;
+    top: 40px;
+    left: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    line-height: 40px;
+    display: none;
+    z-index: 99;
+}
+
+
+/* hero */
+.hero {
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.slidein {
+    width: 3600px;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+.slidein>img {
+    float: left;
+}
+
+
+
+.main {
+    height: 200px;
+}
+
+.row {
+    display: flex;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.notice-gallery {
+    width: 40%;
+    padding: 10px;
+}
+
+/* 공지탭 */
+.tab {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: flex-start;
+    padding-left: 10px;
+}
+
+.tab a {
+    display: block;
+    line-height: 35px;
+    background: #f6c456;
+    color: #c56a36;
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+
+.tab a.active {
+    background: #ffe3a0;
+    color: #222328;
+    font-weight: bold;
+}
+
+.tab-content {
+    background-color: #ffe3a0;
+    padding: 12px 7px;
+    margin-left: 10px;
+}
+
+.tab-content>div {
+    display: none;
+
+}
+
+.tab-content>div.active {
+    display: block;
+
+}
+
+#notice li {
+    border-bottom: 1px dashed #757782;
+    transition: all 0.2s;
+
+}
+
+#notice li:hover {
+    background-color: #f6c456;
+
+}
+
+
+#notice a {
+    line-height: 15px;
+
+}
+
+#gallery {
+    text-align: center;
+}
+
+#gallery img {
+    width: 120px;
+    height: 120px;
+    margin: 8.7px 6.3px;
+}
+
+
+.banner,
+.quick {
+    width: 30%;
+    padding: 10px 10px 0 10px;
+}
+
+.banner img {
+    margin-bottom: 5px;
+}
+.quick img{
+   float: left;
+    width: 33.3%;
+    /* height: 180px; */
+    padding: 10px;
+}
+
+/* .row에 -10px 안에박스 gall,banner,quick에 패딩10px */
+footer {
+    height: 100px;
+    background-color: #8a8d9c;
+    color: #fff;
+    display: flex;
+}
+
+footer div {
+    width: 33.3%;
+}
+
+.logoarea {
+    padding: 30px 20px 0;
+    width: 20%;
+}
+
+.copyarea {
+    width: 60%;
+    text-align: center;
+}
+
+.copyarea p {
+    margin: 0;
+    padding: 0;
+    margin-top: 5px;
+}
+.copyarea p:first-child{
+margin-top: 10px;
+
+}
+
+.snsarea {
+    width: 20%;
+    margin-top: 24px;
+    
+}
+a.sns{
+    display: inline-block;
+    text-indent: -5000px;
+    width: 50px;
+    height: 50px;
+    /* border: 1px solid #ddd;  */
+    border-radius: 8px;
+    margin-left: 10px;
+}
+a.sns.facebook{
+    background: url(../image/sns이미지.jpg) no-repeat -45px -9px;
+    background-size: 525%;
+
+}
+a.sns.youtube{
+    background: url(../image/sns이미지.jpg) no-repeat -46px -70px;
+    background-size: 525%;
+
+}
+a.sns.twitter{
+    background: url(../image/sns이미지.jpg) no-repeat -107px -70px;
+    background-size: 525%;
+
+}
+
+/* 팝업창 */
+.popup{
+    width: 550px;
+height: 300px;
+position: fixed;
+top: 250px;
+background: #fff;
+left: calc(50% - 225px);
+
+/* left: 50%; */
+/* transform: translateX(-50%); */
+padding: 40px;
+border-radius: 10px;
+box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+display: none;
+}
+.closebtn{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.close{
+    padding: 5px 20px;
+ font-size: 16px; 
+}
