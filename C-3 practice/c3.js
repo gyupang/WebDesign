@@ -7,7 +7,7 @@ $(document).ready(function () {
         $(this).find('.submenu').stop().slideUp(400);
 
     });
-    
+
     // $('.navi>li').hover(function () {
     //     $('.submenu', this).fadeToggle();
 
@@ -30,8 +30,13 @@ $(document).ready(function () {
             marginLeft: 0
         });
 
+    });
 
-
+    $('.notice li:first-child').click(function () {
+        $('#modal').addClass('active');
+    });
+    $('.btn').click(function () {
+        $('#modal').removeClass('active')
     });
 
 
